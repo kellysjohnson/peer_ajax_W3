@@ -1,0 +1,5 @@
+{
+  "cities" : [
+    { "name" : "Tokyo", "area" : 2189, "population" : 13210000 }
+  ]
+}
