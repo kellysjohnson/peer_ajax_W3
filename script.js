@@ -1,12 +1,12 @@
 var cityHtml = null;
 var cityData = null;
+var i;
 
 $(document).ready(function(){
     $('.initiate').on('click', function(){
         if(cityHtml === null){
             $.get('template.html', function(data){
                cityHtml = data;
-               $('.container').append(data);
             });
         } else {
             console.log("You already initiated.");
@@ -14,10 +14,13 @@ $(document).ready(function(){
 
         $.get('data.json', function(data){
             cityData = data;
-            var cityName = data.cities[0].name;
-            var cityArea = data.cities[0].area;
-            var cityPop = data.cities[0].population;
-            $('.cityDataContainer').append("<p>Name: " + cityName + "<br>Area: " + cityArea + "<br>Population: " + cityPop + "</p>");
+            for(i = 0; i < data.cities.length; i++) {
+                $('.mainContainer').append(cityHtml);
+                var cityName = data.cities[i].name;
+                var cityArea = data.cities[i].area;
+                var cityPop = data.cities[i].population;
+                $('.cityDataContainer').last().append("<p>Name: " + cityName + "<br>Area: " + cityArea + "<br>Population: " + cityPop + "</p>");
+            }
         });
 
         $('.container').on('click', '.removeButton', function(){

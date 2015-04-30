@@ -1,5 +1,8 @@
 {
   "cities" : [
-    { "name" : "Tokyo", "area" : 2189, "population" : 13210000 }
+    { "name" : "Tokyo", "area" : 2189, "population" : 13210000 },
+    { "name" : "Chicago", "area" : 606, "population" : 2695600 },
+    { "name" : "Santiago", "area" : 641, "population" : 5145599 },
+    { "name" : "Rome", "area" : 1285, "population" : 2869461 }
   ]
 }
