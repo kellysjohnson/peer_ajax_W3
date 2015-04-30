@@ -1,6 +1,10 @@
+/*.cityContainer {*/
+    /*border: solid 2px;*/
+    /*margin: 2px;*/
+    /*border-radius: 25px;*/
+/*}*/
+
 .cityContainer {
-    border: solid 2px;
-    margin: 2px;
-    border-radius: 25px;
+    padding: 20px;
     text-align: center;
 }
